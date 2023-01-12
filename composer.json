@@ -1,0 +1,46 @@
+{
+    "name": "chromatic/php-gd-config-check",
+    "description": "Composer plugin to check for the presence and status of specified formats for the PHP GD library.",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Chromatic\\Composer\\PhpGdConfigCheck\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Dorison",
+            "email": "mark@chromatichq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "composer-plugin-api": "^2.3"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "chromatic/usher": "^2.18",
+        "composer/composer": "^2.0",
+        "phpstan/extension-installer": "^1.2"
+    },
+    "scripts": {
+        "php-check": "composer robo job:check-coding-standards",
+        "php-fix": "composer robo job:fix-coding-standards",
+        "php-stan": "composer robo job:run-static-analysis",
+        "robo": "robo --ansi",
+        "test": [
+            "@php-check",
+            "@php-stan"
+        ]
+    },
+    "extra": {
+        "class": "Chromatic\\Composer\\PhpGdConfigCheck\\Plugin"
+    }
+}

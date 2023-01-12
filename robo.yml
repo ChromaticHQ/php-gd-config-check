@@ -1,0 +1,12 @@
+---
+custom_code_paths:
+  - 'src'
+phpcs_check_extensions:
+  - php
+  - txt
+phpcs_ignore_paths:
+  - ''
+phpcs_standards:
+  - PSR12
+drupal_document_root: web
+twig_lint_enable: false
