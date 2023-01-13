@@ -17,7 +17,7 @@ To override these defaults, include configuration in your `composer.json` file:
 ```json
 "extra": {
   "php-gd-config-check": {
-      "required-formatsZZ": [
+      "required-formats": [
           "JPEG Support",
           "PNG Support"
       ]
