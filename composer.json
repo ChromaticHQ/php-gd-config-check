@@ -16,6 +16,7 @@
     ],
     "require": {
         "php": "^7.4 || ^8.0",
+        "ext-gd": "*",
         "composer-plugin-api": "^2.3"
     },
     "config": {
