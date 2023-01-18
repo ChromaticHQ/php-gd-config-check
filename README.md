@@ -4,6 +4,8 @@
 
 While it is possible to check for the presence of the GD plugin via `composer require ext-gd`, this does not ensure that specific format support is enabled. This Composer plugin allows you to specify a set of required formats for GD and will verify that they are enabled after `composer install` has run.
 
+If these formats are not enabled, Composer will output the issue on the command line.
+
 ## Configuration
 This plugin ships with a default set of required formats that it checks for.
 

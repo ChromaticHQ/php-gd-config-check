@@ -60,7 +60,6 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         $errorMessage = rtrim($errorMessage, ', ');
         $event->getIO()->writeError($errorMessage);
         // @TODO: Figure out the best practice way to force an exit.
-        exit(1);
     }
 
     /**
